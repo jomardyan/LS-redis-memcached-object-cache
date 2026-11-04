@@ -135,3 +135,7 @@ Copyright (c) 2026 Hayk Jomardyan - Lolisoft. Existing contributor and third-par
 
 Public source, build tools and development instructions: https://github.com/jomardyan/Lolisoft-Smart-Hybryd-Cache-Redis-and-memcached
 Run python tools/package-wordpress.py from the repository root for the reproducible upload ZIP. The package includes runtime PHP/assets and license notices; Composer/Node development tools are not required on the WordPress server.
+
+== Licensing hold ==
+
+The pre-existing plugin header/readme identifies GPL-3.0-or-later, while the pre-existing full LICENSE text is GNU Affero GPL3. This preparation preserves both original texts and does not select or change the license grant. The copyright owner must resolve the conflict before WordPress.org submission or distribution of this candidate.

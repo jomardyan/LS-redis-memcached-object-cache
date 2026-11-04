@@ -29,3 +29,7 @@ Official guidance reviewed November 2026:
 * https://developer.wordpress.org/plugins/wordpress-org/common-issues/
 * https://developer.wordpress.org/plugins/wordpress-org/how-your-readme-txt-works/
 * https://wordpress.org/plugins/plugin-check/
+
+## Licensing hold
+
+The pre-existing plugin header/readme identifies GPL-3.0-or-later, while the pre-existing full LICENSE text is GNU Affero GPL3. This preparation preserves both original texts and does not select or change the license grant. The copyright owner must resolve the conflict before WordPress.org submission or distribution of this candidate.
