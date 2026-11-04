@@ -35,8 +35,8 @@ class Smart_Hybrid_Cache_Admin {
 		if ( ! Smart_Hybrid_Cache_Settings::can_manage() ) {
 			return; }
 		add_options_page(
-			esc_html__( 'Smart Hybrid Cache', 'smart-hybrid-cache' ),
-			esc_html__( 'Smart Hybrid Cache', 'smart-hybrid-cache' ),
+			esc_html__( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
+			esc_html__( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
 			'manage_options',
 			$this->page,
 			array( $this, 'render' )
@@ -165,7 +165,7 @@ class Smart_Hybrid_Cache_Admin {
 <div class="wrap smart-hybrid-cache">
 <div class="shc-hero">
 <div>
-<h1><?php esc_html_e( 'Smart Hybrid Cache', 'smart-hybrid-cache' ); ?></h1>
+<h1><?php esc_html_e( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ); ?></h1>
 <p><?php esc_html_e( 'Hybrid Redis and Memcached object caching with safe drop-in management, health checks, and admin controls.', 'smart-hybrid-cache' ); ?></p>
 </div>
 <span class="shc-version"><?php echo esc_html( SMART_HYBRID_CACHE_VERSION ); ?></span>

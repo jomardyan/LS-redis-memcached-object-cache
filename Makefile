@@ -89,3 +89,21 @@ clean:
 
 tree:
 	@find $(PLUGIN_DIR) -maxdepth 3 -type f | sort
+
+# Local quality and source packaging commands.
+.PHONY: install dev lint-php package security
+
+install:
+	@echo "Install PHP CLI and WordPress/WooCommerce in a local test site; no runtime Composer dependencies."
+
+dev:
+	@echo "Activate this plugin in a local WordPress/WooCommerce development site."
+
+lint-php:
+	php tools/php-lint.php smart-hybrid-cache
+
+package:
+	$(MAKE) build
+
+security:
+	$(MAKE) lint-php

@@ -72,7 +72,7 @@ class Smart_Hybrid_Cache_Site_Health {
 		$status  = Smart_Hybrid_Cache_Health_Check::get_status( $manager );
 
 		$info['smart-hybrid-cache'] = array(
-			'label'       => __( 'Smart Hybrid Cache', 'smart-hybrid-cache' ),
+			'label'       => __( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
 			'description' => __( 'Persistent object cache configuration and runtime status.', 'smart-hybrid-cache' ),
 			'fields'      => array(
 				'version'         => array(

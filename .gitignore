@@ -1,2 +1,10 @@
 build/
 *.zip
+
+# Local development and quality-check artifacts.
+/vendor/
+/node_modules/
+/.phpunit.cache/
+/.phpunit.result.cache
+/smart-hybrid-cache/vendor/
+/smart-hybrid-cache/.phpunit.cache/

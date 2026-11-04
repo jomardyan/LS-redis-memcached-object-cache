@@ -1,4 +1,4 @@
-# Smart Hybrid Cache
+# Lolisoft Press addon Redis and Memcached Object Cache
 
 Persistent WordPress object caching with Redis or Memcached. Includes safe drop-in management, installation-scoped invalidation, diagnostics, and WP-CLI commands.
 
@@ -8,7 +8,7 @@ Version 1.2.1. Requires WordPress 6.0 or newer and PHP 8.0 or newer. Licensed un
 
 1. Install a Redis or Memcached server and its PHP extension through your host.
 2. Run `make build` and upload `build/smart-hybrid-cache.zip` through the WordPress plugin installer.
-3. Activate the plugin and open Settings > Smart Hybrid Cache.
+3. Activate the plugin and open Settings > Lolisoft Press addon Redis and Memcached Object Cache.
 4. Save the server settings and run a connection test.
 5. Enable or install the object cache drop-in. Reload the page to verify the active engine.
 
@@ -92,3 +92,13 @@ Deactivation removes the owned drop-in by default. If removal is disabled, it wr
 ## Contributions and security
 
 Use [GitHub issues](https://github.com/jomardyan/Lolisoft-Smart-Hybryd-Cache-Redis-and-memcached/issues) for reproducible non-sensitive problems. See [SECURITY.md](SECURITY.md) for vulnerability reporting and [CONTRIBUTING.md](CONTRIBUTING.md) for development guidance.
+
+## Display name and upgrade compatibility
+
+The display name is **Lolisoft Press addon Redis and Memcached Object Cache**. Install updates into the existing plugin directory. The plugin filename, text domain, namespaces, hooks, option keys, database tables and cache/drop-in ownership signatures retain their existing identities.
+
+Public web searches on 4 November 2026 found no indexed exact match for the full proposed display name. This is limited conflict screening, not trademark clearance: another business uses the Lolisoft name. Before public directory submission, check [EUIPO availability guidance](https://www.euipo.europa.eu/pt/trade-marks/before-applying/availability) and [EUIPO search tools](https://www.euipo.europa.eu/en/search-ip) for the intended territories and classes.
+
+## Repository quality commands
+
+`make install`, `make dev`, `make test`, `make lint-php`, `make build`, `make clean` and `make package` provide the local entry points. PHP syntax checking works without WordPress. Runtime and production-host integration checks still need a local WordPress/WooCommerce installation; existing regression harnesses do not simulate a full site. `make package` uses the existing distribution builder where available; the callback plugin source ZIP is a source snapshot and requires its asset build before installation.
