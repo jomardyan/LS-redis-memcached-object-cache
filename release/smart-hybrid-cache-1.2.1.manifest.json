@@ -1,0 +1,108 @@
+{
+  "slug": "smart-hybrid-cache",
+  "version": "1.2.1",
+  "archive": "smart-hybrid-cache-1.2.1.zip",
+  "sha256": "6c9387d38dd3aa20a680d716f2c9b6f1c60bf350f4852c05bd5d160444b8b0e7",
+  "files": [
+    {
+      "path": "COPYRIGHT.txt",
+      "bytes": 270,
+      "sha256": "e3213b19c2a4b165cd3f82643f958bc0b5e97ee5481fae2f9831218fd4da4060"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "assets/admin.css",
+      "bytes": 8343,
+      "sha256": "6778d71ba8cf92da1769d82a03b595f844fcceb5edbb4f72f0bd9001254e6378"
+    },
+    {
+      "path": "assets/admin.js",
+      "bytes": 3132,
+      "sha256": "03fbf7a5f0d4e29b318d4183721560216341953dfc8d780b558d0cd53ca8cdcc"
+    },
+    {
+      "path": "dropins/object-cache.php",
+      "bytes": 19742,
+      "sha256": "d1f2116fcb93526abd2b3f8d9388a61940f2318b2279979e946cc23a639b17a5"
+    },
+    {
+      "path": "includes/class-admin.php",
+      "bytes": 47067,
+      "sha256": "db8402482709493889de539ab89d2962492f88316ddfb09044d7a32d2c76cbce"
+    },
+    {
+      "path": "includes/class-cache-manager.php",
+      "bytes": 4895,
+      "sha256": "65fc619ce07b8a82fcc2553513e2ba772525ff2666bbb347ae163a485f597942"
+    },
+    {
+      "path": "includes/class-cli.php",
+      "bytes": 6075,
+      "sha256": "a08c4657690646f32be7884b32bd2efd9e4e1b2ca8a2ad93f61c77e11f91d5f9"
+    },
+    {
+      "path": "includes/class-diagnostics.php",
+      "bytes": 2518,
+      "sha256": "4bec2fe5b0025b10ace83b36db240da81649b191df9e591b916d82735261f8a5"
+    },
+    {
+      "path": "includes/class-dropin-installer.php",
+      "bytes": 6629,
+      "sha256": "d85266f44b85c7e49b2c13c1f331689597f42cf09f147a24908446707aa16b4f"
+    },
+    {
+      "path": "includes/class-health-check.php",
+      "bytes": 5537,
+      "sha256": "ed2313de1ba8ddee1963bd9c0296768242d306409381625867b17be593290dd9"
+    },
+    {
+      "path": "includes/class-logger.php",
+      "bytes": 1522,
+      "sha256": "43f43923ad649f6b92bf8884aa931ae11030c46f11ea9bd312f7f1e8f3cea1a3"
+    },
+    {
+      "path": "includes/class-memcached-client.php",
+      "bytes": 4868,
+      "sha256": "3e3370053147d9d2f4b4d099c3879de4296c912af130887a200f050b5765ef85"
+    },
+    {
+      "path": "includes/class-plugin.php",
+      "bytes": 5208,
+      "sha256": "f613a05af29fc1538d32a81ac48fe3fba7a082dbcf057bb9a3a5c817aff9b145"
+    },
+    {
+      "path": "includes/class-redis-client.php",
+      "bytes": 4879,
+      "sha256": "3dd896ad6553b96c0730b326d77c4dfdb56779e64949af4047d266ce43aaae42"
+    },
+    {
+      "path": "includes/class-settings.php",
+      "bytes": 11496,
+      "sha256": "90c35bc4b12b965028382d1c91e9610e005d9410adce6315dead6138de79ecef"
+    },
+    {
+      "path": "includes/class-site-health.php",
+      "bytes": 4377,
+      "sha256": "fd80e86d6f0ceddd5954782b81008484da3405631341f9802d1906ad833a0b3a"
+    },
+    {
+      "path": "readme.txt",
+      "bytes": 10386,
+      "sha256": "b8b9c7ca52869da3b622e63e45c3dae02f14a2b225ef4e6e1790d1c36f2dc881"
+    },
+    {
+      "path": "smart-hybrid-cache.php",
+      "bytes": 2290,
+      "sha256": "c39d1dd62b3b15f604f41bf72c79883c6e1071df224aafd43916302ff03d6853"
+    },
+    {
+      "path": "uninstall.php",
+      "bytes": 2829,
+      "sha256": "73a660d86ecd1d59739516ad92a761e2d0f6b0e3ff66e467434ae4eb8cfbcda8"
+    }
+  ]
+}

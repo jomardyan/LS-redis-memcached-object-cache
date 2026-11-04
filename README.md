@@ -102,3 +102,11 @@ Public web searches on 4 November 2026 found no indexed exact match for the full
 ## Repository quality commands
 
 `make install`, `make dev`, `make test`, `make lint-php`, `make build`, `make clean` and `make package` provide the local entry points. PHP syntax checking works without WordPress. Runtime and production-host integration checks still need a local WordPress/WooCommerce installation; existing regression harnesses do not simulate a full site. `make package` uses the existing distribution builder where available; the callback plugin source ZIP is a source snapshot and requires its asset build before installation.
+
+## Copyright
+
+Copyright (c) 2026 Hayk Jomardyan - Lolisoft. See [COPYRIGHT.md](COPYRIGHT.md); existing licenses and third-party notices remain applicable.
+
+## WordPress.org upload package
+
+Run `python tools/package-wordpress.py` from the repository root. The reviewed runtime allowlist in `wordpress-package.json` produces the installable ZIP, SHA256 checksum, and per-file manifest in `release/`. Upload the ZIP through WordPress or the WordPress.org submission form. Developer dependencies and local test files are excluded. See [WORDPRESS-DIRECTORY.md](WORDPRESS-DIRECTORY.md) for source, checks, and submission requirements.

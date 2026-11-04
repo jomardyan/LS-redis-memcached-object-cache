@@ -5,7 +5,7 @@ Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
 Stable tag: 1.2.1
-License: GPLv3 or later
+License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Persistent object caching with Redis or Memcached, isolated cache flushing, connection tests, diagnostics, and WP-CLI support.
@@ -128,3 +128,10 @@ Update the owned drop-in from plugin settings after upgrading. Forced reads and 
 
 = 1.2.0 =
 Update the owned drop-in from the plugin settings. The cache namespace changes and warms again automatically. Back up an existing third-party drop-in before replacing it.
+
+== Source code and building ==
+
+Copyright (c) 2026 Hayk Jomardyan - Lolisoft. Existing contributor and third-party license notices remain applicable.
+
+Public source, build tools and development instructions: https://github.com/jomardyan/Lolisoft-Smart-Hybryd-Cache-Redis-and-memcached
+Run python tools/package-wordpress.py from the repository root for the reproducible upload ZIP. The package includes runtime PHP/assets and license notices; Composer/Node development tools are not required on the WordPress server.

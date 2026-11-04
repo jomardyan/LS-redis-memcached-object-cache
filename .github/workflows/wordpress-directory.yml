@@ -1,0 +1,43 @@
+name: WordPress directory upload package
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  directory-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.13'
+      - name: Build the upload ZIP and verify every source byte
+        id: package
+        run: python tools/package-wordpress.py
+      - name: Extract the actual upload ZIP for Plugin Check
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib, zipfile
+          root = pathlib.Path.cwd()
+          meta = json.loads((root / 'release/wordpress-upload.json').read_text())
+          with zipfile.ZipFile(root / 'release' / meta['archive']) as archive:
+              archive.extractall(root / '.wordpress-upload-check')
+          PY
+      - name: Check the actual package with official WordPress Plugin Check
+        uses: WordPress/plugin-check-action@10857da14b6c2246d15402b3e69f777edcf8c12e # v1
+        with:
+          build-dir: .wordpress-upload-check/smart-hybrid-cache
+          slug: smart-hybrid-cache
+      - name: Keep the ZIP, checksum, manifest and checker evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: smart-hybrid-cache-wordpress-directory-upload
+          path: |
+            ${{ steps.package.outputs.archive }}
+            ${{ steps.package.outputs.checksum }}
+            ${{ steps.package.outputs.manifest }}
+          if-no-files-found: error

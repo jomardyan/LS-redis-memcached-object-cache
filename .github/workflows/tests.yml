@@ -22,7 +22,7 @@ jobs:
         image: memcached:1.6-alpine
         ports: ['11211:11211']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -58,7 +58,7 @@ jobs:
     env:
       SHC_WP_ENGINE: ${{ matrix.engine }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'

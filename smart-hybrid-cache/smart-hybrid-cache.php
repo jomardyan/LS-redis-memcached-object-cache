@@ -1,5 +1,7 @@
 <?php
 /**
+ * Copyright (c) 2026 Hayk Jomardyan - Lolisoft.
+ *
  * Plugin Name: Lolisoft Press addon Redis and Memcached Object Cache
  * Plugin URI:  https://github.com/jomardyan/Lolisoft-Smart-Hybryd-Cache-Redis-and-memcached
  * Description: Persistent WordPress object caching with Redis or Memcached, safe fallbacks, admin controls, and WP-CLI support.

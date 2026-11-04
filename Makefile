@@ -103,7 +103,7 @@ lint-php:
 	php tools/php-lint.php smart-hybrid-cache
 
 package:
-	$(MAKE) build
+	python3 tools/package-wordpress.py
 
 security:
 	$(MAKE) lint-php

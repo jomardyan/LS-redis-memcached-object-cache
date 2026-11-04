@@ -1,0 +1,25 @@
+{
+  "root": "smart-hybrid-cache",
+  "entry": "smart-hybrid-cache.php",
+  "slug": "smart-hybrid-cache",
+  "include": [
+    "smart-hybrid-cache.php",
+    "uninstall.php",
+    "readme.txt",
+    "LICENSE",
+    "COPYRIGHT.txt",
+    "includes",
+    "assets",
+    "languages",
+    "drop-in",
+    "dropins",
+    "templates"
+  ],
+  "required": [
+    "includes/class-plugin.php",
+    "dropins/object-cache.php",
+    "assets/admin.js",
+    "assets/admin.css"
+  ],
+  "version_constant": "SMART_HYBRID_CACHE_VERSION"
+}

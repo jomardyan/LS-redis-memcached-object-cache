@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - uses: shivammathur/setup-php@v2
         with:
@@ -73,7 +73,7 @@ jobs:
         # directly at the archive root. Uploading the built ZIP would produce a
         # nested ZIP (smart-hybrid-cache.zip inside smart-hybrid-cache.zip),
         # which WordPress rejects with "No valid plugins were found".
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: smart-hybrid-cache
           path: smart-hybrid-cache/
@@ -81,7 +81,7 @@ jobs:
 
       - name: Stage release ZIPs
         if: github.event_name == 'release'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: release-zips
           path: build/*.zip

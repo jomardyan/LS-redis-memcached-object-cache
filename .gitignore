@@ -8,3 +8,6 @@ build/
 /.phpunit.result.cache
 /smart-hybrid-cache/vendor/
 /smart-hybrid-cache/.phpunit.cache/
+
+# Disposable extracted WordPress upload checks.
+/.wordpress-upload-check/
