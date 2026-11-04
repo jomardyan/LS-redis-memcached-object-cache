@@ -48,17 +48,19 @@ for required in config.get('required', []):
     if required not in files: raise SystemExit('Required runtime file absent from package inputs: ' + required)
 out = root / 'release' / (config['slug'] + '-' + version + '.zip')
 out.parent.mkdir(exist_ok=True)
-with zipfile.ZipFile(out, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+# Stored entries are identical across Python/zlib versions on Windows and Linux.
+with zipfile.ZipFile(out, 'w', compression=zipfile.ZIP_STORED) as archive:
     for name, data in sorted(files.items()):
         info = zipfile.ZipInfo(config['slug'] + '/' + name, (1980,1,1,0,0,0))
         info.create_system = 3
         info.external_attr = 0o100644 << 16
-        info.compress_type = zipfile.ZIP_DEFLATED
+        info.compress_type = zipfile.ZIP_STORED
         archive.writestr(info, data)
 with zipfile.ZipFile(out) as archive:
     if archive.testzip() is not None: raise SystemExit('ZIP CRC check failed')
     for name, data in files.items():
         if archive.read(config['slug'] + '/' + name) != data: raise SystemExit('ZIP/source mismatch: ' + name)
+if out.stat().st_size >= 10 * 1024 * 1024: raise SystemExit('Upload ZIP exceeds the WordPress.org10MiB limit')
 digest = hashlib.sha256(out.read_bytes()).hexdigest()
 out.with_suffix('.zip.sha256').write_text(digest + '  ' + out.name + '\n', encoding='utf-8')
 manifest = {'slug':config['slug'], 'version':version, 'archive':out.name, 'sha256':digest,
