@@ -12,6 +12,12 @@ jobs:
         php: ['8.1', '8.3']
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Verify Makefile help and local target wiring
+        if: runner.os == 'Linux'
+        working-directory: ${{ github.workspace }}
+        run: |
+          make --no-print-directory
+          make --no-print-directory -n test build package clean
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
