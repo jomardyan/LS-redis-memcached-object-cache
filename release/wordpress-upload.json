@@ -1,8 +1,8 @@
 {
   "slug": "smart-hybrid-cache",
-  "version": "1.2.1",
-  "archive": "smart-hybrid-cache-1.2.1.zip",
-  "sha256": "2d312fa80ddb9c14806366dbe22098c9561981240164b3d08437b6e1e59a4e32",
+  "version": "1.2.2",
+  "archive": "smart-hybrid-cache-1.2.2.zip",
+  "sha256": "fc485cf8056cdb653006bbb789313ffa7640e1cc7ad8dd3428482e8c85f85a92",
   "files": [
     {
       "path": "COPYRIGHT.txt",
@@ -27,7 +27,7 @@
     {
       "path": "dropins/object-cache.php",
       "bytes": 19742,
-      "sha256": "d1f2116fcb93526abd2b3f8d9388a61940f2318b2279979e946cc23a639b17a5"
+      "sha256": "04b3bb1b56fc2026b83b997dba65b72112d943d177a3b7ea4b91de5c58fb33ec"
     },
     {
       "path": "includes/class-admin.php",
@@ -91,13 +91,13 @@
     },
     {
       "path": "readme.txt",
-      "bytes": 10746,
-      "sha256": "db1ce2041c7ca36cbfcc5f38e97143577da25715ec100f860ec016c37bc8a92f"
+      "bytes": 11004,
+      "sha256": "a790b3ce59a727eaec942966de838a8fc48528c3118d2fc84e23e7d249eb259c"
     },
     {
       "path": "smart-hybrid-cache.php",
       "bytes": 2290,
-      "sha256": "c39d1dd62b3b15f604f41bf72c79883c6e1071df224aafd43916302ff03d6853"
+      "sha256": "b37a5112c97c92f61e2bad2348f8c11e5974eb6f67e223de7a048c029089b23e"
     },
     {
       "path": "uninstall.php",

@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SMART_HYBRID_CACHE_DROPIN_VERSION', '1.2.1' );
+define( 'SMART_HYBRID_CACHE_DROPIN_VERSION', '1.2.2' );
 
 class WP_Object_Cache {
 	private array $cache                 = array();

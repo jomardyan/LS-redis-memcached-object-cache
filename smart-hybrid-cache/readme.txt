@@ -127,6 +127,9 @@ The source repository stores screenshots in .wordpress-org. They are deployed to
 
 == Upgrade Notice ==
 
+= 1.2.2 =
+Plugin, drop-in and release metadata are synchronized. Existing backend settings and cache behavior are preserved.
+
 = 1.2.1 =
 Update the owned drop-in from plugin settings after upgrading. Forced reads and writes now refresh the cache namespace across requests. Cache server connection settings remain in place.
 

@@ -2,7 +2,7 @@
 
 Persistent WordPress object caching with Redis or Memcached. Includes safe drop-in management, installation-scoped invalidation, diagnostics, and WP-CLI commands.
 
-Version 1.2.1. Requires WordPress 6.0 or newer and PHP 8.0 or newer. Licensed under GPL-3.0-or-later.
+Version 1.2.2. Requires WordPress 6.0 or newer and PHP 8.0 or newer. Licensed under GPL-3.0-or-later.
 
 ## Install
 
@@ -48,7 +48,7 @@ make release
 Release outputs
 
 - `build/smart-hybrid-cache.zip`
-- `build/smart-hybrid-cache-1.2.1.zip`
+- `build/smart-hybrid-cache-1.2.2.zip`
 
 The GitHub Actions `smart-hybrid-cache` artifact downloads as an installable plugin archive. GitHub releases attach the standalone and versioned ZIPs. Release workflow values are passed through environment variables before use in shell commands.
 
@@ -74,7 +74,7 @@ wp smart-cache diagnostics --pretty
 Update the changelog and upgrade notice, then run
 
 ```sh
-make set-version VERSION=1.2.1
+make set-version VERSION=1.2.2
 make ci
 make release
 ```
