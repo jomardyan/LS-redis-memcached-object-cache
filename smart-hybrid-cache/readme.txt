@@ -4,7 +4,7 @@ Tags: cache, object cache, redis, memcached, performance
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -98,6 +98,10 @@ The source repository stores screenshots in .wordpress-org. They are deployed to
 2. Cache behavior, expiry, cleanup, logging, and group configuration.
 
 == Changelog ==
+
+= 1.2.2 =
+* Refresh release documentation and record verified WordPress/PHP compatibility, dependency checks and coverage limits.
+
 
 = 1.2.1 =
 * Fixed forced reads and writes after another request flushes the cache.

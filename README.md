@@ -110,3 +110,7 @@ Copyright (c) 2026 Hayk Jomardyan - Lolisoft. See [COPYRIGHT.md](COPYRIGHT.md); 
 ## WordPress.org upload package
 
 Run `python tools/package-wordpress.py` from the repository root. The reviewed runtime allowlist in `wordpress-package.json` produces the installable ZIP, SHA256 checksum, and per-file manifest in `release/`. Upload the ZIP through WordPress or the WordPress.org submission form. Developer dependencies and local test files are excluded. See [WORDPRESS-DIRECTORY.md](WORDPRESS-DIRECTORY.md) for source, checks, and submission requirements.
+
+## Maintenance verification — 1.2.2
+
+See [the maintenance audit](AUDIT-2026-11-09.md) for changes, exact test scope, dependency advisories and remaining integration limits. The audit covers WordPress 7.1.4 and PHP 8.2–8.5; its startup checks do not certify external service accounts.
