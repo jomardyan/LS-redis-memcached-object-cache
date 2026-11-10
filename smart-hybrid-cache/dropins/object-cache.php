@@ -1,6 +1,6 @@
 <?php
 /**
- * Smart Hybrid Cache Drop-In
+ * LS Redis and Memcached Object Cache Drop-In
  *
  * Standalone early-bootstrap object cache. Installed configuration is generated
  * locally by the plugin. Never call the Options API while starting this cache.
@@ -453,7 +453,7 @@ class WP_Object_Cache {
 	}
 
 	public function stats(): void {
-		echo esc_html( 'Smart Hybrid Cache hits ' . $this->cache_hits . ', misses ' . $this->cache_misses . ', engine ' . $this->engine );
+		echo esc_html( 'LS Redis and Memcached Object Cache hits ' . $this->cache_hits . ', misses ' . $this->cache_misses . ', engine ' . $this->engine );
 	}
 }
 

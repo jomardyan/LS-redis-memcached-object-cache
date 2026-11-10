@@ -103,7 +103,7 @@ class Smart_Hybrid_Cache_Plugin {
 
 	public static function activate( bool $network_wide = false ): void {
 		if ( is_multisite() && ! $network_wide ) {
-			wp_die( esc_html__( 'Network activate Smart Hybrid Cache and configure it on the main site. The object cache is shared by the network.', 'smart-hybrid-cache' ) );
+			wp_die( esc_html__( 'Network activate LS Redis and Memcached Object Cache and configure it on the main site. The object cache is shared by the network.', 'smart-hybrid-cache' ) );
 		}
 		Smart_Hybrid_Cache_Settings::ensure_defaults();
 		$options = Smart_Hybrid_Cache_Settings::get_options();

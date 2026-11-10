@@ -108,7 +108,7 @@ class Smart_Hybrid_Cache_CLI {
 		if ( $error ) {
 			\WP_CLI::error( $error );
 		}
-		\WP_CLI::success( 'Smart Hybrid Cache disabled.' );
+		\WP_CLI::success( 'LS Redis and Memcached Object Cache disabled.' );
 	}
 
 	/**

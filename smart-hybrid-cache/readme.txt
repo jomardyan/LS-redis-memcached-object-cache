@@ -1,4 +1,4 @@
-=== Lolisoft Press addon Redis and Memcached Object Cache ===
+=== LS Redis and Memcached Object Cache ===
 Contributors: jomardyan
 Tags: cache, object cache, redis, memcached, performance
 Requires at least: 6.0
@@ -12,7 +12,7 @@ Persistent object caching with Redis or Memcached, isolated cache flushing, conn
 
 == Description ==
 
-Lolisoft Press addon Redis and Memcached Object Cache adds persistent object caching to WordPress through the Redis or Memcached PHP extension. Use the settings page to configure a server, test read/write access, install the object-cache.php drop-in, and inspect runtime status.
+LS Redis and Memcached Object Cache adds persistent object caching to WordPress through the Redis or Memcached PHP extension. Use the settings page to configure a server, test read/write access, install the object-cache.php drop-in, and inspect runtime status.
 
 The plugin does not install server software and does not provide page caching. Your hosting provider must supply a Redis or Memcached server and the matching PHP extension. PHP needs write access to the local wp-content directory to install and update the drop-in.
 
@@ -49,7 +49,7 @@ Source code, build instructions, issue tracking, and contribution guidance are a
 1. Ask your host to configure Redis with ext-redis, or Memcached with ext-memcached.
 2. Install the plugin ZIP through Plugins > Add New > Upload Plugin, or copy the smart-hybrid-cache folder into wp-content/plugins.
 3. Activate the plugin. On multisite, network activate it and configure it as a super administrator on the main site.
-4. Open Settings > Lolisoft Press addon Redis and Memcached Object Cache, choose an engine, and enter the server details.
+4. Open Settings > LS Redis and Memcached Object Cache, choose an engine, and enter the server details.
 5. Save settings and test the appropriate connection on the Actions tab.
 6. Enable the persistent object cache drop-in in Behavior, or install it from Actions.
 7. Reload the page and confirm that the selected backend is active. A file being installed does not itself mean the backend is connected.

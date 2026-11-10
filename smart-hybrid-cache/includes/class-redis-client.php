@@ -142,7 +142,7 @@ class Smart_Hybrid_Cache_Redis_Client {
 
 	private function safe_error( Throwable $e ): string {
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-			error_log( 'Smart Hybrid Cache Redis error: ' . $e->getMessage() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( 'LS Redis and Memcached Object Cache Redis error: ' . $e->getMessage() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		}
 		return __( 'Redis connection failed. Check host, port, credentials, and TLS settings.', 'smart-hybrid-cache' );
 	}

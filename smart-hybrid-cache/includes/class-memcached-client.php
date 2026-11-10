@@ -125,7 +125,7 @@ class Smart_Hybrid_Cache_Memcached_Client {
 
 	private function safe_error( Throwable $e ): string {
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-			error_log( 'Smart Hybrid Cache Memcached error: ' . $e->getMessage() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+			error_log( 'LS Redis and Memcached Object Cache Memcached error: ' . $e->getMessage() ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		}
 		return __( 'Memcached connection failed. Check host and port settings.', 'smart-hybrid-cache' );
 	}

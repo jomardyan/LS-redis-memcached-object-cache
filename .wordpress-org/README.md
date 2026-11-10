@@ -1,6 +1,6 @@
 # WordPress.org directory screenshots
 
-These original screenshots show the actual Lolisoft Press addon Redis and Memcached Object Cache admin UI in a local WordPress test installation. No cache connection or performance result is simulated. The test environment has no native cache extension installed.
+These existing screenshots show an earlier branding of the LS Redis and Memcached Object Cache admin UI in a local WordPress test installation. Their original pixels are preserved. No cache connection or performance result is simulated. The test environment has no native cache extension installed.
 
 - `screenshot-1.png` shows the settings overview and engine controls.
 - `screenshot-2.png` shows cache behavior and cleanup controls.

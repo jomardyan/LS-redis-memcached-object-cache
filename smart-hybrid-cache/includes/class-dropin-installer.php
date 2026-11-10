@@ -35,8 +35,8 @@ class Smart_Hybrid_Cache_Dropin_Installer {
 		$label   = __( 'Not installed.', 'smart-hybrid-cache' );
 		$message = __( 'Install the drop-in to enable persistent object caching.', 'smart-hybrid-cache' );
 		if ( $owned ) {
-			$label   = __( 'Created by Smart Hybrid Cache.', 'smart-hybrid-cache' );
-			$message = $active ? __( 'Smart Hybrid Cache persistent caching is active.', 'smart-hybrid-cache' ) : __( 'The drop-in is installed but persistent caching is inactive. Check the engine settings and server connection.', 'smart-hybrid-cache' );
+			$label   = __( 'Created by LS Redis and Memcached Object Cache.', 'smart-hybrid-cache' );
+			$message = $active ? __( 'LS Redis and Memcached Object Cache persistent caching is active.', 'smart-hybrid-cache' ) : __( 'The drop-in is installed but persistent caching is inactive. Check the engine settings and server connection.', 'smart-hybrid-cache' );
 		} elseif ( $exists ) {
 			$label   = __( 'Created by another plugin or manually.', 'smart-hybrid-cache' );
 			$message = __( 'Another object cache drop-in is installed. Explicit confirmation is required to replace it.', 'smart-hybrid-cache' );
@@ -117,7 +117,7 @@ class Smart_Hybrid_Cache_Dropin_Installer {
 			return true;
 		}
 		if ( is_link( $target ) || ( ! self::is_owned() && ! $force ) ) {
-			return new WP_Error( 'not_owned', __( 'This object-cache.php is not owned by Smart Hybrid Cache.', 'smart-hybrid-cache' ) );
+			return new WP_Error( 'not_owned', __( 'This object-cache.php is not owned by LS Redis and Memcached Object Cache.', 'smart-hybrid-cache' ) );
 		}
 		$fs = self::init_filesystem();
 		if ( ! $fs || ! $fs->delete( $target ) ) {

@@ -72,7 +72,7 @@ replace_in_file(
 );
 update_readme_metadata( $readme_file, $version );
 
-echo "Bumped Smart Hybrid Cache metadata from {$current} to {$version}\n";
+echo "Bumped LS Redis and Memcached Object Cache metadata from {$current} to {$version}\n";
 
 /**
  * Detect the current plugin version from the main plugin file.

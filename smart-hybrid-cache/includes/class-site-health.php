@@ -23,7 +23,7 @@ class Smart_Hybrid_Cache_Site_Health {
 
 	public static function tests( array $tests ): array {
 		$tests['direct']['smart_hybrid_cache_object_cache'] = array(
-			'label' => __( 'Persistent object cache (Smart Hybrid Cache)', 'smart-hybrid-cache' ),
+			'label' => __( 'Persistent object cache (LS Redis and Memcached Object Cache)', 'smart-hybrid-cache' ),
 			'test'  => array( __CLASS__, 'run_test' ),
 		);
 		return $tests;
@@ -36,7 +36,7 @@ class Smart_Hybrid_Cache_Site_Health {
 		$dropin  = $status['dropin'];
 
 		$result = array(
-			'label'       => __( 'Smart Hybrid Cache is providing a persistent object cache', 'smart-hybrid-cache' ),
+			'label'       => __( 'LS Redis and Memcached Object Cache is providing a persistent object cache', 'smart-hybrid-cache' ),
 			'status'      => 'good',
 			'badge'       => array(
 				'label' => __( 'Performance', 'smart-hybrid-cache' ),
@@ -50,17 +50,17 @@ class Smart_Hybrid_Cache_Site_Health {
 		if ( ! $dropin['active'] ) {
 			$result['status']      = 'recommended';
 			$result['label']       = __( 'A persistent object cache is not active', 'smart-hybrid-cache' );
-			$result['description'] = '<p>' . esc_html__( 'WordPress benefits significantly from a persistent object cache. Install the Smart Hybrid Cache drop-in or another supported object cache.', 'smart-hybrid-cache' ) . '</p>';
+			$result['description'] = '<p>' . esc_html__( 'WordPress benefits significantly from a persistent object cache. Install the LS Redis and Memcached Object Cache drop-in or another supported object cache.', 'smart-hybrid-cache' ) . '</p>';
 			$result['actions']     = sprintf(
 				'<p><a class="button" href="%1$s">%2$s</a></p>',
 				esc_url( admin_url( 'options-general.php?page=smart-hybrid-cache' ) ),
-				esc_html__( 'Open Smart Hybrid Cache settings', 'smart-hybrid-cache' )
+				esc_html__( 'Open LS Redis and Memcached Object Cache settings', 'smart-hybrid-cache' )
 			);
 		} elseif ( ! $dropin['owned'] ) {
 			$result['label'] = __( 'Another drop-in provides the object cache', 'smart-hybrid-cache' );
 		} elseif ( ! empty( $status['last_error'] ) ) {
 			$result['status']      = 'recommended';
-			$result['label']       = __( 'Smart Hybrid Cache reported a connection error', 'smart-hybrid-cache' );
+			$result['label']       = __( 'LS Redis and Memcached Object Cache reported a connection error', 'smart-hybrid-cache' );
 			$result['description'] = '<p>' . esc_html( $status['last_error'] ) . '</p>';
 		}
 
@@ -72,7 +72,7 @@ class Smart_Hybrid_Cache_Site_Health {
 		$status  = Smart_Hybrid_Cache_Health_Check::get_status( $manager );
 
 		$info['smart-hybrid-cache'] = array(
-			'label'       => __( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
+			'label'       => __( 'LS Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
 			'description' => __( 'Persistent object cache configuration and runtime status.', 'smart-hybrid-cache' ),
 			'fields'      => array(
 				'version'         => array(

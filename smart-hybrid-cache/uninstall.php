@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall Smart Hybrid Cache.
+ * Uninstall LS Redis and Memcached Object Cache.
  *
  * Removes plugin options and optionally deletes the object-cache.php drop-in
  * if it was created by this plugin and the user opted in to cleanup on uninstall.

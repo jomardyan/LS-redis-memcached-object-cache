@@ -35,8 +35,8 @@ class Smart_Hybrid_Cache_Admin {
 		if ( ! Smart_Hybrid_Cache_Settings::can_manage() ) {
 			return; }
 		add_options_page(
-			esc_html__( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
-			esc_html__( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
+			esc_html__( 'LS Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
+			esc_html__( 'LS Redis and Memcached Object Cache', 'smart-hybrid-cache' ),
 			'manage_options',
 			$this->page,
 			array( $this, 'render' )
@@ -70,14 +70,14 @@ class Smart_Hybrid_Cache_Admin {
 		$redis = class_exists( 'Redis' );
 		$mem   = class_exists( 'Memcached' );
 		if ( 'auto' === $engine && ! $redis && ! $mem ) {
-			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'Smart Hybrid Cache: No supported PHP cache extension is available. Install Redis or Memcached before enabling the object cache drop-in.', 'smart-hybrid-cache' ) );
+			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'LS Redis and Memcached Object Cache: No supported PHP cache extension is available. Install Redis or Memcached before enabling the object cache drop-in.', 'smart-hybrid-cache' ) );
 			return;
 		}
 		if ( 'redis' === $engine && ! $redis ) {
-			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'Smart Hybrid Cache: Redis PHP extension is not available.', 'smart-hybrid-cache' ) );
+			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'LS Redis and Memcached Object Cache: Redis PHP extension is not available.', 'smart-hybrid-cache' ) );
 		}
 		if ( 'memcached' === $engine && ! $mem ) {
-			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'Smart Hybrid Cache: Memcached PHP extension is not available.', 'smart-hybrid-cache' ) );
+			printf( '<div class="notice notice-warning"><p>%s</p></div>', esc_html__( 'LS Redis and Memcached Object Cache: Memcached PHP extension is not available.', 'smart-hybrid-cache' ) );
 		}
 	}
 
@@ -165,7 +165,7 @@ class Smart_Hybrid_Cache_Admin {
 <div class="wrap smart-hybrid-cache">
 <div class="shc-hero">
 <div>
-<h1><?php esc_html_e( 'Lolisoft Press addon Redis and Memcached Object Cache', 'smart-hybrid-cache' ); ?></h1>
+<h1><?php esc_html_e( 'LS Redis and Memcached Object Cache', 'smart-hybrid-cache' ); ?></h1>
 <p><?php esc_html_e( 'Hybrid Redis and Memcached object caching with safe drop-in management, health checks, and admin controls.', 'smart-hybrid-cache' ); ?></p>
 </div>
 <span class="shc-version"><?php echo esc_html( SMART_HYBRID_CACHE_VERSION ); ?></span>
@@ -265,7 +265,7 @@ class Smart_Hybrid_Cache_Admin {
 			'docs'       => __( 'Docs', 'smart-hybrid-cache' ),
 		);
 		?>
-<nav class="nav-tab-wrapper shc-tabs" role="tablist" aria-label="<?php esc_attr_e( 'Smart Hybrid Cache settings sections', 'smart-hybrid-cache' ); ?>">
+<nav class="nav-tab-wrapper shc-tabs" role="tablist" aria-label="<?php esc_attr_e( 'LS Redis and Memcached Object Cache settings sections', 'smart-hybrid-cache' ); ?>">
 		<?php foreach ( $tabs as $slug => $label ) : ?>
 <button type="button" id="shc-tab-button-<?php echo esc_attr( $slug ); ?>" class="nav-tab<?php echo 'general' === $slug ? ' nav-tab-active' : ''; ?>" role="tab" aria-selected="<?php echo 'general' === $slug ? 'true' : 'false'; ?>" aria-controls="shc-tab-<?php echo esc_attr( $slug ); ?>" data-shc-tab="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></button>
 <?php endforeach; ?>
@@ -314,7 +314,7 @@ class Smart_Hybrid_Cache_Admin {
 			),
 		);
 		?>
-<div class="shc-overview" aria-label="<?php esc_attr_e( 'Smart Hybrid Cache overview', 'smart-hybrid-cache' ); ?>">
+<div class="shc-overview" aria-label="<?php esc_attr_e( 'LS Redis and Memcached Object Cache overview', 'smart-hybrid-cache' ); ?>">
 		<?php foreach ( $cards as $card ) : ?>
 <div class="shc-overview-card shc-state-<?php echo esc_attr( $card['state'] ); ?>">
 <span><?php echo esc_html( $card['label'] ); ?></span>
@@ -331,7 +331,7 @@ class Smart_Hybrid_Cache_Admin {
 			'test_memcached'       => array( __( 'Test Memcached connection', 'smart-hybrid-cache' ), __( 'Verify saved Memcached settings. Save changes before running this test.', 'smart-hybrid-cache' ) ),
 			'flush'                => array( __( 'Flush this installation cache', 'smart-hybrid-cache' ), __( 'Invalidate this WordPress installation cache without clearing other applications.', 'smart-hybrid-cache' ) ),
 			'install_dropin'       => array( __( 'Install object cache drop-in', 'smart-hybrid-cache' ), __( 'Enable persistent object caching when no other drop-in owns object-cache.php.', 'smart-hybrid-cache' ) ),
-			'remove_dropin'        => array( __( 'Remove object cache drop-in', 'smart-hybrid-cache' ), __( 'Remove only the drop-in created by Smart Hybrid Cache unless replacement is confirmed.', 'smart-hybrid-cache' ) ),
+			'remove_dropin'        => array( __( 'Remove object cache drop-in', 'smart-hybrid-cache' ), __( 'Remove only the drop-in created by LS Redis and Memcached Object Cache unless replacement is confirmed.', 'smart-hybrid-cache' ) ),
 			'show_status'          => array( __( 'Show current status', 'smart-hybrid-cache' ), __( 'Refresh dashboard status and recent events.', 'smart-hybrid-cache' ) ),
 			'download_diagnostics' => array( __( 'Download diagnostics report', 'smart-hybrid-cache' ), __( 'Export a JSON report (Redis password redacted) suitable for support requests.', 'smart-hybrid-cache' ) ),
 		);
@@ -485,7 +485,7 @@ class Smart_Hybrid_Cache_Admin {
 <div class="shc-docs">
 
 <h2><?php esc_html_e( 'Installation & Configuration Guide', 'smart-hybrid-cache' ); ?></h2>
-<p class="shc-docs-intro"><?php esc_html_e( 'This guide covers installing and configuring Redis and Memcached on a Linux VPS, enabling the required PHP extensions, and connecting them to the Smart Hybrid Cache plugin.', 'smart-hybrid-cache' ); ?></p>
+<p class="shc-docs-intro"><?php esc_html_e( 'This guide covers installing and configuring Redis and Memcached on a Linux VPS, enabling the required PHP extensions, and connecting them to the LS Redis and Memcached Object Cache plugin.', 'smart-hybrid-cache' ); ?></p>
 
 <div class="shc-docs-toc">
 <h3><?php esc_html_e( 'Table of Contents', 'smart-hybrid-cache' ); ?></h3>
